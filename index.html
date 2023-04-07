@@ -11,9 +11,6 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-messaging.js"></script>
 
-<!-- Thêm các thư viện Firebase SDK vào trang -->
-<script src="/firebase-app.js"></script>
-<script src="/firebase-messaging.js"></script>
 
 <script>
     const firebaseConfig = {
@@ -33,7 +30,7 @@
 
     // Đăng ký Service Worker
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('sw.js')
             .then(function(registration) {
                 console.log('Service Worker registered:', registration);
                 // Đăng ký thiết bị với FCM
